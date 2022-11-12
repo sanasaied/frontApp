@@ -1,5 +1,7 @@
 ---
-#buildproject
-              
-                - name: build app
-                  shell: ng build --prod
+#buidproject
+
+- name: install dep
+  shell: npm install --save --legacy-peer-deps
+- name: build app
+  shell: ng build
