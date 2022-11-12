@@ -6,4 +6,4 @@
     password: 07481948@R
     
 - name: Push the Docker image into the repo
-  shell: docker push fediba/devops:latest
+  shell: docker push sanasaied/devops:latest
