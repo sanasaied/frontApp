@@ -24,7 +24,13 @@ pipeline {
              
             }
         }
-    
+     stage('docker'){
+            steps{
+                script{
+                    sh "ansible-playbook Ansible/docker.yml -i ansible/inventory/host.yml -e ansible_become_password=ubuntu"
+                }
+            }
+        }
 
            
         }
