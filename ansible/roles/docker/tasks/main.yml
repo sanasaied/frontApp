@@ -4,7 +4,7 @@
   docker_image:
     name: sanasaied/devops
     build:
-      path: /var/lib/jenkins/workspace/test_cd
+      path: /var/lib/jenkins/workspace/Projet_livraison_continu@2
       pull: no
     source: build
     state: present
