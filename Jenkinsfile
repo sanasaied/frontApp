@@ -7,32 +7,23 @@ pipeline {
                 git branch: 'main',
                 url : 'https://github.com/sanasaied/frontApp.git'
              
-            }
-        }
-       
-  
-          stage('Compile and Clean') {
-            steps {
-                sh "mvn clean compile"
-             
-            }
-        }
-        
-         stage('Test') {
-            steps {
-                sh "mvn test"
-             
-            }
-        }
-        
-         stage('Deploy') {
-            steps {
-                sh "mvn package"
+         
              
             }
         }
        
      
+      stage('Build') {
+            steps {
+                script{
+                	sh " ansible-playbook ansible/build.yml -i ansible/inventory/host.yml "
+                	
+                }
+             
+         
+             
+            }
+        }
     
 
            
